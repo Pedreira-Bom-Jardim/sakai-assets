@@ -1,0 +1,278 @@
+// Otimizações de performance e lazy loading
+
+// Lazy loading para imagens
+.lazy-image {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background: var(--surface-ground);
+
+  &.loaded {
+    opacity: 1;
+  }
+
+  &.loading {
+    background: linear-gradient(90deg, var(--surface-ground) 25%, var(--surface-hover) 50%, var(--surface-ground) 75%);
+    background-size: 200% 100%;
+    animation: loading-shimmer 1.5s infinite;
+  }
+}
+
+@keyframes loading-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+// Virtual scrolling para listas grandes
+.virtual-scroll-container {
+  height: 400px;
+  overflow: auto;
+  position: relative;
+}
+
+.virtual-scroll-item {
+  position: absolute;
+  left: 0;
+  right: 0;
+  transition: transform 0.2s ease;
+}
+
+// Debounce para inputs de busca
+.debounce-input {
+  transition: background-color 0.2s ease;
+}
+
+.debounce-input.searching {
+  background-color: color-mix(in srgb, var(--primary-color) 10%, transparent);
+}
+
+// Cache de componentes
+.component-cache {
+  contain: layout style paint;
+  will-change: auto;
+}
+
+// Otimizações para animações
+.optimized-animation {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+// Lazy loading para componentes Angular
+.lazy-component {
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface-ground);
+  border-radius: var(--border-radius-md);
+
+  .loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--surface-border);
+    border-top: 3px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+}
+
+// Otimizações para tabelas grandes
+.table-optimized {
+  contain: layout style paint;
+
+  tbody {
+    contain: layout style paint;
+  }
+
+  tr {
+    contain: layout style paint;
+    will-change: auto;
+  }
+}
+
+// Cache inteligente para dados
+.data-cache-indicator {
+  position: relative;
+
+  &::after {
+    content: '📱';
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    font-size: 0.75rem;
+    opacity: 0.6;
+  }
+
+  &.cache-hit::after {
+    content: '💾';
+    color: var(--success-color);
+  }
+
+  &.cache-miss::after {
+    content: '🌐';
+    color: var(--info-color);
+  }
+}
+
+// Preload de recursos críticos
+.preload-critical {
+  .critical-image {
+    content-visibility: auto;
+    contain-intrinsic-size: 0 200px;
+  }
+
+  .critical-text {
+    content-visibility: auto;
+  }
+}
+
+// Otimizações para mobile
+.mobile-optimized {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+
+  .mobile-touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+// Compressão de assets
+.compressed-asset {
+  // Placeholder para assets comprimidos
+  background: var(--surface-ground);
+  border-radius: var(--border-radius-md);
+
+  &.image-compressed {
+    background: linear-gradient(45deg, var(--surface-ground) 25%, transparent 25%),
+                linear-gradient(-45deg, var(--surface-ground) 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, var(--surface-ground) 75%),
+                linear-gradient(-45deg, transparent 75%, var(--surface-ground) 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+  }
+}
+
+// Monitoramento de performance
+.performance-monitor {
+  .performance-badge {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: var(--surface-overlay);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius-md);
+    font-size: 0.75rem;
+    font-family: monospace;
+    z-index: 9999;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--surface-border);
+  }
+
+  .performance-metric {
+    display: block;
+    margin-bottom: 2px;
+
+    &.good { color: var(--success-color); }
+    &.warning { color: var(--warning-color); }
+    &.poor { color: var(--error-color); }
+  }
+}
+
+// Service Worker indicators
+.service-worker-status {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-md);
+  font-size: 0.75rem;
+  z-index: 9999;
+
+  &.installing {
+    background: var(--warning-color);
+    color: var(--warning-contrast);
+  }
+
+  &.installed {
+    background: var(--success-color);
+    color: var(--success-contrast);
+  }
+
+  &.error {
+    background: var(--error-color);
+    color: var(--error-contrast);
+  }
+}
+
+// Bundle splitting indicators
+.bundle-chunk {
+  position: relative;
+
+  &::before {
+    content: attr(data-chunk);
+    position: absolute;
+    top: -20px;
+    right: 0;
+    background: var(--info-color);
+    color: var(--info-contrast);
+    padding: 2px 6px;
+    font-size: 0.625rem;
+    border-radius: var(--border-radius-sm);
+    font-family: monospace;
+    opacity: 0.7;
+  }
+}
+
+// Memory usage indicators
+.memory-indicator {
+  .memory-bar {
+    height: 4px;
+    background: var(--surface-border);
+    border-radius: var(--border-radius-sm);
+    overflow: hidden;
+
+    .memory-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--success-color), var(--warning-color), var(--error-color));
+      transition: width 0.3s ease;
+    }
+  }
+
+  .memory-text {
+    font-size: 0.75rem;
+    color: var(--text-color-secondary);
+    margin-top: var(--spacing-xs);
+  }
+}
+
+// Network status indicators
+.network-status {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-md);
+  font-size: 0.75rem;
+  z-index: 9999;
+
+  &.online {
+    background: var(--success-color);
+    color: var(--success-contrast);
+  }
+
+  &.offline {
+    background: var(--error-color);
+    color: var(--error-contrast);
+  }
+
+  &.slow {
+    background: var(--warning-color);
+    color: var(--warning-contrast);
+  }
+}

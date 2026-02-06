@@ -1,0 +1,20 @@
+{
+  "name": "Pedreira Bom Jardim",
+  "shortName": "PBJ",
+  "version": "2.0.0",
+  "build": "2025.09.29.001",
+  "description": "Sistema de gestão para Pedreira Bom Jardim",
+  "author": "Francis Santiago",
+  "lastUpdated": "2025-09-29T16:00:00.000Z",
+  "changelog": {
+    "1.0.0": [
+      "Módulo Administrativo",
+      "Módulo Financeiro",
+      "Módulo Almoxarifado"
+    ],
+    "2.0.0": [
+      "Módulo de PDV",
+      "Módulo de Chat"
+    ]
+  }
+}
