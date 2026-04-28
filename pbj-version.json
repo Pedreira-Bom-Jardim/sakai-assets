@@ -1,20 +1,37 @@
 {
   "name": "Pedreira Bom Jardim",
   "shortName": "PBJ",
-  "version": "2.0.0",
-  "build": "2025.09.29.001",
+  "version": "2.0.2",
+  "build": "2026-03-16T11:44:33.120Z",
   "description": "Sistema de gestão para Pedreira Bom Jardim",
   "author": "Francis Santiago",
-  "lastUpdated": "2025-09-29T16:00:00.000Z",
+  "lastUpdated": "2026-03-16T11:44:33.120Z",
   "changelog": {
     "1.0.0": [
-      "Módulo Administrativo",
-      "Módulo Financeiro",
-      "Módulo Almoxarifado"
+      "Sistema inicial com funcionalidades básicas",
+      "Módulo de funcionários e RH",
+      "Sistema de autenticação e autorização",
+      "Gestão financeira básica",
+      "Relatórios iniciais"
     ],
     "2.0.0": [
-      "Módulo de PDV",
-      "Módulo de Chat"
+      "Reestruturação completa do sistema",
+      "Nova interface de usuário mais moderna e responsiva",
+      "Melhorias significativas na performance",
+      "Novas funcionalidades de logística e expedição",
+      "Integração com sistemas de terceiros para gestão de cargas"
+    ],
+    "2.0.1": [
+      "Correção de bugs menores na interface de expedição",
+      "Ajustes na lógica de cálculo de quantidades em cargas parciais",
+      "Melhorias na exibição de informações de pedidos e cargas",
+      "Atualização de dependências e otimizações de código"
+    ],
+    "2.0.2": [
+      "Correção de bugs relacionados à autenticação de usuários",
+      "Ajustes na interface de relatórios financeiros",
+      "Melhorias na estabilidade do sistema durante picos de acesso",
+      "Atualização de bibliotecas e dependências para garantir segurança"
     ]
   }
 }
