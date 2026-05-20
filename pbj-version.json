@@ -1,11 +1,11 @@
 {
   "name": "Pedreira Bom Jardim",
   "shortName": "PBJ",
-  "version": "2.0.3",
-  "build": "2026-05-04T22:03:03.000Z",
+  "version": "2.0.4",
+  "build": "2026-05-20T03:12:42.727Z",
   "description": "Sistema de gestão para Pedreira Bom Jardim",
   "author": "Francis Santiago",
-  "lastUpdated": "2026-05-04T22:03:03.000Z",
+  "lastUpdated": "2026-05-20T03:12:42.727Z",
   "changelog": {
     "1.0.0": [
       "Sistema inicial com funcionalidades básicas",
@@ -40,6 +40,13 @@
       "Remoção de data e horário final de agendamento de pedidos",
       "Adição de suporte a tabela de preços referenciado ao cliente",
       "Seleção automática de tabela de preços associada ao cliente",
+      "Outras correções e melhorias"
+    ],
+    "2.0.4": [
+      "Melhorias no PDV",
+      "Adição de suporte a pagamento por crédito de cliente",
+      "Criação de sistema de cobrança para clientes",
+      "Correções de exibição de lançamentos financeiros com taxas",
       "Outras correções e melhorias"
     ]
   }
