@@ -31,8 +31,33 @@
             margin: 0.75rem 0;
         }
 
-        > a {
-            display: none;
+        > .layout-menuitem-root-toggle {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            margin: 0.25rem 0;
+            padding: 0.5rem 0.75rem;
+            border: none;
+            background: transparent;
+            font-size: 0.857rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--text-color);
+            cursor: pointer;
+            border-radius: var(--content-border-radius);
+            text-align: left;
+
+            .layout-menuitem-text {
+                flex: 1;
+            }
+
+            &:hover {
+                background-color: var(--surface-hover);
+            }
+        }
+
+        > ul {
+            overflow: hidden;
         }
     }
 
@@ -47,7 +72,8 @@
     }
 
     li.active-menuitem {
-        > a {
+        > a,
+        > .layout-menuitem-root-toggle {
             .layout-submenu-toggler {
                 transform: rotate(-180deg);
             }
