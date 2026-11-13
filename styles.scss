@@ -2,3 +2,30 @@
 @use 'primeicons/primeicons.css';
 @use '@/assets/layout/layout.scss';
 @use '@/assets/demo/demo.scss';
+
+
+tr,
+input,
+textarea,
+select,
+p-inputtext,
+p-select,
+p-checkbox,
+p-datepicker,
+p-inputcolor,
+p-inputgroup,
+p-inputnumber,
+p-inputotp,
+p-inputtags,
+p-knob,
+p-listbox,
+p-radiobutton,
+p-rating,
+p-selectbutton,
+p-slider,
+p-togglebutton,
+p-toggleswitch,
+p-treeselect,
+p-datepicker {
+    text-transform: uppercase;
+}
